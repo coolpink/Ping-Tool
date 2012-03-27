@@ -5,7 +5,7 @@
 
 homepage:
   url:   /
-  param: { module: homepage, action: index }
+  param: { module: HomePage, action: index }
 
 check_domain:
   url:   /check-domain/
