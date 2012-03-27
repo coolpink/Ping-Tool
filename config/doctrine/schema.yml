@@ -1,0 +1,131 @@
+Check:
+  tableName: checks
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    status:
+      type: string(45)
+    created:
+      type: timestamp
+    project_id:
+      type: integer(4)
+      notnull: true
+  relations:
+    Project:
+      class: Project
+      local: project_id
+      foreign: id
+      foreignAlias: Checks
+      onDelete: cascade
+      onUpdate: no action
+  indexes:
+    fk_checks_project1:
+      fields: [project_id]
+  options:
+    charset: utf8
+    type: InnoDB
+
+Client:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    title:
+      type: string(45)
+  options:
+    charset: utf8
+    type: InnoDB
+
+Project:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    domain:
+      type: string(255)
+    client_id:
+      type: integer(4)
+      notnull: true
+  relations:
+    Client:
+      class: Client
+      local: client_id
+      foreign: id
+      foreignAlias: Projects
+      onDelete: cascade
+      onUpdate: no action
+    ProjectTeam:
+      class: TeamMember
+      local: project_id
+      foreign: team_member_id
+      foreignAlias: ProjectTeam
+      refClass: ProjectHasTeamMember
+  indexes:
+    fk_project_client:
+      fields: [client_id]
+  options:
+    charset: utf8
+    type: InnoDB
+
+ProjectHasTeamMember:
+  tableName: project_has_team_member
+  columns:
+    project_id:
+      type: integer(4)
+      primary: true
+      notnull: true
+    team_member_id:
+      type: integer(4)
+      primary: true
+      notnull: true
+  relations:
+    Project:
+      class: Project
+      local: project_id
+      foreign: id
+      foreignAlias: ProjectHasTeamMembers
+      onDelete: cascade
+      onUpdate: no action
+    TeamMember:
+      class: TeamMember
+      local: team_member_id
+      foreign: id
+      foreignAlias: ProjectHasTeamMembers
+      onDelete: cascade
+      onUpdate: no action
+  indexes:
+    fk_project_has_team_member_team_member1:
+      fields: [team_member_id]
+    fk_project_has_team_member_project1:
+      fields: [project_id]
+  options:
+    charset: utf8
+    type: InnoDB
+
+TeamMember:
+  tableName: team_member
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    name:
+      type: string(45)
+      notnull: true
+    email:
+      type: string(45)
+      notnull: true
+    telephone:
+      type: string(45)
+  options:
+    charset: utf8
+    type: InnoDB
+

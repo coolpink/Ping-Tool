@@ -1,0 +1,168 @@
+table.listing {
+    width: 100%;
+    background-color: #fff;
+    border-top:1px solid #D6E5F5;
+}
+table.listing td,
+table.listing th {
+    font-size: 1.2em;
+}
+table.listing td,
+table.listing th a span{
+    padding: 2px;
+    overflow: hidden;
+    zoom: 1;
+    cursor: default;
+    padding-left: 4px;
+}
+table.listing td.sf_admin_list_td_meta_navigation_title {
+    padding: 0;
+}
+table.listing tr th.actions-column {
+  width: 150px;
+}
+table.listing th {
+    font-weight: normal;
+    background-image: url(images/header-bg.gif);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    padding-bottom: 2px;
+}
+table.listing th a {
+    display: block;
+    height: 100%;
+    outline: none;
+    text-decoration: none;
+    background-image: url(images/header-bg.gif);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    color: #4c607a;
+}
+table.listing th a span,
+table.listing th span {
+    display: block;
+    padding: 4px;
+    height: 100%;
+    color: #4c607a;
+}
+table.listing th span input {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+table.listing th a:hover span {
+    background-image: url(images/header-bg-over-right.gif);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+
+}
+table.listing th a:hover {
+    background-image: url(images/header-bg-over.gif);
+}
+table.listing th a:active {
+    background-image: url(images/header-bg-down.gif);
+}
+table.listing th a:active span {
+    background-image: url(images/header-bg-down-right.gif);
+}
+table.listing tr td {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    background-repeat: repeat-x;
+    background-position: center left;
+    color: #6d6d6d;
+}
+table.listing tr td a {
+    color: #000;
+    text-decoration: none;
+}
+table.listing tr.hovered td {
+    background-image: url(images/row-hover.gif);
+    border-top: 1px solid #b8d6fb;
+    border-bottom: 1px solid #b8d6fb;
+}
+table.listing tr.selected td {
+    background-image: url(images/row-selected.gif);
+    border-bottom: 1px solid #7da2ce;
+    border-top: 1px solid #7da2ce;
+}
+/* filter */
+
+.filter-window {
+  overflow: auto;
+  height: 478px;
+}
+
+/* dragging */
+.filedragger {
+    width:110px;
+    height:110px;
+    background-image: url(images/move.png);
+    z-index: 1000000;
+}
+.dragger-moveto {
+    margin-left: 50px;
+    background-image: url(images/moveto-left.gif);
+    background-position: center left;
+    background-repeat: no-repeat;
+    font-size: 1.2em;
+    display: none;
+    z-index: 1000000;
+}
+.dragger-moveto div {
+    font-size: 1em;
+    padding: 3px;
+    color: #3357db;
+    padding-left: 20px;
+    padding-right: 10px;
+    background-image: url(images/moveto-right.gif);
+    background-position: center right;
+    background-repeat: no-repeat;
+    z-index: 1000000;
+}
+.dragger-moveto div a {
+    color: #333;
+    text-decoration: none;
+}
+span#move-where {
+    color: #001f91;
+    z-index: 1000000;
+}
+.dragger-error {
+    margin-left: 50px;
+    background-image: url(images/error.png);
+    width: 14px;
+    height: 14px;
+    display: none;
+    z-index: 1000000;
+}
+
+table.listing tr.dragafter div {
+    background-image: url(images/sort.gif);
+    background-position: bottom left;
+}
+table.listing tr.dragbefore div {
+    background-image: url(images/sort.gif);
+    background-position: top left !important;
+}
+
+ul.sf_admin_td_actions li a {
+  padding-left: 20px;
+  background: url(/sfDoctrinePlugin/images/default.png) no-repeat;
+}
+ul.sf_admin_td_actions li.sf_admin_action_edit a {
+  padding-left: 20px;
+  background: url(/sfDoctrinePlugin/images/edit.png) no-repeat;
+}
+ul.sf_admin_td_actions li.sf_admin_action_new a {
+  padding-left: 20px;
+  background: url(/sfDoctrinePlugin/images/new.png) no-repeat;
+}
+ul.sf_admin_td_actions li.sf_admin_action_delete a {
+  background-image: url(/sfDoctrinePlugin/images/delete.png);
+}
+ul.sf_admin_td_actions li.sf_admin_action_promote a {
+	background: url(/csDoctrineActAsSortablePlugin/images/sortable/icons/promote.png) no-repeat;
+}
+ul.sf_admin_td_actions li.sf_admin_action_demote a {
+	background: url(/csDoctrineActAsSortablePlugin/images/sortable/icons/demote.png) no-repeat;
+}

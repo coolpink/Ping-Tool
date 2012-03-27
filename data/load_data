@@ -1,0 +1,4 @@
+php ../symfony coolpink:build --all --no-confirmation
+php ../symfony cc
+php ../symfony plugin:publish-assets
+mysql -uroot MarkHill < datadump.sql

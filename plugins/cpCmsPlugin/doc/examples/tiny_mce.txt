@@ -1,0 +1,17 @@
+Insert the code below in your template :
+
+
+  <?php use_javascript('tiny_mce/tiny_mce.js') ?>
+  <?php use_javascript('/cpMediaBrowserPlugin/js/WindowManager.js') ?>
+  
+  <form>
+    <textarea></textarea>
+  </form>
+  <script type="text/javascript">
+  cpMediaBrowserWindowManager.init('<?php echo url_for('cp_media_browser_widget') ?>');
+  tinyMCE.init({
+    mode : "textareas",
+    theme:  "advanced",
+    file_browser_callback: "cpMediaBrowserWindowManager.tinymceCallback"
+  });
+  </script>

@@ -1,0 +1,49 @@
+div.contextmenu {
+  position: absolute;
+  z-index: 10000;
+  font-size: 11px;
+}
+div.contextmenu ul {
+  background: #f0f0f0;
+  border: 1px solid #999;
+  padding: 2px;
+}
+div.contextmenu ul li {
+  background: url(jquery.contextmenu.bg.png) repeat-y 20px 0px;
+  border: 1px solid #f0f0f0;
+  position: relative;
+  cursor: default;
+}
+div.contextmenu ul li.hovered {
+  border: 1px solid #d6e5f5;
+  background-color: #f8fafd;
+}
+div.contextmenu ul li div.hasChildren {
+  background: url(jquery.contextmenu.arrow.png) no-repeat;
+  width: 4px;
+  height: 7px;
+  display: inline-block;
+  position: absolute;
+  right: 5px;
+  top: 8px;
+}
+
+/* Link styles */
+div.contextmenu ul li span.aslink,
+div.contextmenu ul li a,
+div.contextmenu ul li a:hover,
+div.contextmenu ul li a:visited {
+  display: block;
+  padding: 5px 27px;
+  color: #000;
+  text-decoration: none;
+  cursor: default;
+  white-space: nowrap;
+}
+
+/* Keep sub-levels hidden */
+div.contextmenu ul ul {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}

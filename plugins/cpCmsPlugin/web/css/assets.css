@@ -1,0 +1,203 @@
+/* Folder structure */
+#cp_media_browser_structure {
+  overflow: auto;
+  padding: 0.5em 0;
+}
+
+
+/* Asset icons */
+ul#cp_media_browser_list {
+  list-style: none;
+  clear:      both;
+  -khtml-user-select: none; /* Prevent text select in webkit */
+}
+ul#cp_media_browser_list li {
+  border:       1px solid #fff;
+  float:        left;
+  margin:       2px;
+  text-align:   center;
+  list-style:   none;
+  cursor: default;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 2px;
+}
+ul#cp_media_browser_list li.hovered {
+  border: 1px solid #d6e5f5;
+  background-color: #f8fafd;
+}
+ul#cp_media_browser_list li.selected {
+  border: 1px solid #7da2ce;
+  background-color: #c2dcfc;
+}
+ul#cp_media_browser_list.list li {
+  float: none;
+  text-align: left;
+  border: 1px solid #d6e5f5;
+}
+ul#cp_media_browser_list li.up .icon {
+  outline: none;
+  cursor: pointer;
+}
+ul#cp_media_browser_list ul li {
+  width:        105px;
+  height:       116px;
+}
+ul#cp_media_browser_list a {
+  display:  block;
+}
+ul#cp_media_browser_list img {
+  border:     none;
+}
+
+ul#cp_media_browser_list .icon,
+ul#cp_media_browser_list .up a {
+  margin: auto;
+  outline: none;
+  width:  90px;
+  height: 90px;
+}
+ul#cp_media_browser_list.list .icon,
+ul#cp_media_browser_list.list .up a {
+  width:  60px;
+  height: 60px;
+  margin: 0 5px 0 0;
+  float: left;
+}
+ul#cp_media_browser_list.list label,
+ul#cp_media_browser_list.list span.type,
+ul#cp_media_browser_list.list span.dimensions {
+  display: none;
+}
+ul#cp_media_browser_list.list .info,
+ul#cp_media_browser_list.list span,
+ul#cp_media_browser_list.list .up label {
+  display: block;
+}
+ul#cp_media_browser_list.list .fullname {
+  font-size: 1.2em;
+}
+ul#cp_media_browser_list.list .action {
+  clear: left;
+  display: block;
+}
+ul#cp_media_browser_list.list .action * {
+  display: none;
+}
+ul#cp_media_browser_list .folder .icon {
+  background: url(/cpCmsPlugin/images/icons/folder_90.png) no-repeat 50% 50%;
+}
+ul#cp_media_browser_list.list .folder .icon {
+  background: url(/cpCmsPlugin/images/icons/folder_60.png) no-repeat 50% 50%;
+}
+ul#cp_media_browser_list .file .icon {
+  background: url(/cpCmsPlugin/images/icons/file_90.png) no-repeat 50% 50%;
+}
+ul#cp_media_browser_list .up .icon {
+  background: url(/cpCmsPlugin/images/icons/up_90.png) no-repeat 50% 50%;
+}
+ul#cp_media_browser_list.list .up .icon {
+  background: url(/cpCmsPlugin/images/icons/up_60.png) no-repeat 50% 50%;
+}
+ul#cp_media_browser_list .info,
+ul#cp_media_browser_list .action {
+  display: none;
+}
+
+#cp_media_browser_list .action li.rename {
+  display: none;
+}
+
+.clear {
+  clear: both;
+}
+
+/* Actions bar */
+#cp_media_browser_actions li a span img {
+    vertical-align: top;
+}
+#cp_media_browser_actions li.spacer {
+	margin: 5px 10px 0px 0px;
+	background-image: url(/cpCmsPlugin/images/sep.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+#cp_media_browser_actions .sf_admin_action_style {
+  float: right;
+}
+#sf_admin_action_change_style {
+  position: absolute;
+  background: #DFE9F7;
+  border: 1px solid #A0AFC3;
+  border-top: 0;
+  display: none;
+}
+#sf_admin_action_change_style li {
+  float: none;
+  margin: 0 2px;
+}
+#sf_admin_action_change_style li img {
+    vertical-align: top;
+}
+
+#main-center h1 span {
+  display: block;
+  color: #666;
+  font-size: 75%;
+}
+
+#cp_media_browser_structure a.hovered {
+  background-color: #c2dcfc;
+}
+#cp_media_browser_actions li.spacer,
+#cp_media_browser_actions li.sf_admin_action_select,
+#cp_media_browser_actions li.sf_admin_action_rename,
+#cp_media_browser_actions li.sf_admin_action_delete {
+  display: none;
+}
+
+
+/* Media browser forms */
+#cp_media_browser_upload, #cp_media_browser_mkdir {
+  display: none;
+  position: absolute;
+  top: 30px;
+  padding: 5px;
+  background: #fff;
+  border: solid #d6e5f5;
+  border-width: 0 1px 1px;
+  z-index: 5;
+}
+#cp_media_browser_upload h2, #cp_media_browser_mkdir h2 {
+  display: inline;
+  line-height: 18px;
+}
+
+#cp_media_browser_forms .form-row {
+  display: inline-block;
+  float: left;
+  margin: 10px 0;
+}
+#cp_media_browser_mkdir {
+  left: 145px;
+}
+#cp_media_browser_upload {
+  left: 5px;
+}
+#cp_media_browser_forms div a.closeForm {
+  float: right;
+}
+
+/* File information */
+#cp_media_browser_list .type, #cp_media_browser_list .fullname {
+  display: none;
+}
+#cp_media_browser_file_info {
+  position: absolute;
+  bottom: 10px;
+  display: none;
+}
+#cp_media_browser_file_info h4 {
+  margin-bottom: 0.5em;
+}

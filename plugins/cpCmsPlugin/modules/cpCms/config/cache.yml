@@ -1,0 +1,10 @@
+_list_tr:
+  enabled: on
+  lifetime: 10086400
+  
+_cached_list:
+  enabled: on
+  lifetime: 10086400
+
+_list_td_actions:
+  enabled: false

@@ -1,0 +1,7 @@
+default:
+  javascripts:
+    - /cpCmsPlugin/js/treeTable.js
+    - /cpCmsPlugin/js/tree.js
+
+  stylesheets:
+    - /cpCmsPlugin/cmsplugin.css

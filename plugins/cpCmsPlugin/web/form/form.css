@@ -1,0 +1,135 @@
+fieldset.form-fieldset
+{  
+  -moz-border-radius:   10px;
+  -webkit-border-radius:10px;
+  border-radius:        10px;
+  background-color:     #F6F9FD;
+  margin:               10px;
+  
+}
+div.fieldset-fields {
+	padding: 0 20px;
+}
+fieldset.fieldset_cpCms div.fieldset-fields {
+	padding: 0;
+}
+
+fieldset.fieldset_cpCms div.fieldset-fields div.fieldset-fields {
+	padding: 0 20px;
+}
+fieldset#sf_fieldset_none {
+	padding-top: 0;
+	background-image: none;
+}
+fieldset.fieldset_cpCms {
+	background-color: transparent !important;
+	margin: 0 !important;
+	-moz-border-radius: 0 !important;
+	-webkit-border-radius:0px !important;
+	border-radius:        0px !important;
+	
+}
+
+#main-center .ui-layout-north h1
+{
+  border-bottom:        1px solid #D6E5F5;
+}
+div.form-row
+{
+  padding:               20px 0 20px;
+  border-top:	1px solid #eee;
+}
+div.form-row div.label
+{
+  font-size:            1.3em;
+  padding:              0 0 10px;
+  color:                #003399;
+}
+div.has-error div.label,
+div.errors ul.error_list li
+{
+  color:                #cc0000 !important;
+  font-weight:          bold;
+}
+div.form-row div.help {
+  color:                #999;
+  font-style:           italic;
+}
+div.form-row div.plain {
+  font-size:            1.3em;
+  padding:              0 0 10px;
+}
+fieldset.form-fieldset h2
+{
+  -moz-border-radius:   10px;
+  -webkit-border-radius:10px;
+  border-radius:        10px;
+  background-color: #E8F1FA;
+  border: 1px solid #D8E7F6;
+  color: #333;
+  font-size: 1.3em;
+  font-weight: normal;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+fieldset.form-fieldset h2.hover {
+	background-color: #dce9f7;
+}
+/* field types */
+
+.admin-form input.sfWidgetFormInputText
+{
+  width:                450px;
+}
+.admin-form textarea.sfWidgetFormTextarea
+{
+  width:                450px;
+  height:               100px;
+}
+.admin-form select.sfWidgetFormDoctrineChoice,
+.admin-form select.choice
+{
+  width:                450px;
+}
+.admin-form select.list-multiple
+{
+  height:               100px;
+}
+
+.metabar
+{
+  padding:              10px;
+  width:                300px;
+}
+
+.hidden
+{
+  display:              none;
+}
+
+.sf_admin_form_field_meta_navigation_title input,
+.sf_admin_form_field_meta_page_title input,
+.sf_admin_form_field_meta_path input,
+.sf_admin_form_field_meta_keywords textarea,
+.sf_admin_form_field_meta_description textarea
+{
+    width: 200px;
+    background-color: #f0f4f8;
+    border: 1px solid #ABC6DD;
+}
+
+.selected_image span {
+	display: block;
+	font-size: 1.3em;
+	color: #666;
+	background-color: #eee;
+	width: 150px;
+	height: 150px;
+	border: 1px solid #999;
+	text-align: center;
+	line-height: 150px;
+}
+.selected_image img {
+	border: 1px solid #999;
+
+}

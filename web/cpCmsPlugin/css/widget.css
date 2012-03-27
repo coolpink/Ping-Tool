@@ -1,0 +1,88 @@
+#cp_media_browser_actions .sf_admin_action_style,
+.ui-layout-west {
+  display: none;
+}
+div.selected_file {
+  font-size: 1.2em;
+}
+
+/*
+ * Buttons
+ */
+a.mbp_form_select,
+a.mbp_form_replace,
+a.mbp_form_crop,
+a.mbp_form_delete,
+a.mbp_form_replace_file,
+a.mbp_form_delete_file {
+  text-decoration: none;
+  padding: 5px 10px;
+  line-height: 1;
+  margin: 0px 10px 0px 0px;
+  font-family: "lucida grande", sans-serif;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 0 0 5px #f5f5f5;
+  -moz-box-shadow: 0 0 5px #f5f5f5;
+  -webkit-box-shadow: 0 0 5px #f5f5f5;
+}
+a.mbp_form_select:hover,
+a.mbp_form_replace:hover,
+a.mbp_form_crop:hover,
+a.mbp_form_delete:hover,
+a.mbp_form_replace_file:hover,
+a.mbp_form_delete_file:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px #e5e5e5;
+  -moz-box-shadow: 0 0 5px #e5e5e5;
+  -webkit-box-shadow: 0 0 5px #e5e5e5;
+}
+a.mbp_form_select,
+a.mbp_form_replace,
+a.mbp_form_replace_file,
+a.mbp_form_select_file {
+  background: #7FBF4D;
+  font-weight: bold;
+  background: -moz-linear-gradient(0% 100% 90deg, #63A62F, #7FBF4D);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7FBF4D), to(#63A62F));
+  border: 1px solid #63A62F;
+  color: #fff;
+  text-shadow: 0 1px 0px #3e751a;
+}
+a.mbp_form_select:hover,
+a.mbp_form_replace:hover,
+a.mbp_form_select_file:hover,
+a.mbp_form_replace_file:hover {
+  background: #73b142;
+  background: -moz-linear-gradient(0% 100% 90deg, #569426, #73b142);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#73b142), to(#569426));
+}
+a.mbp_form_crop {
+  background: #eee;
+  background: -moz-linear-gradient(0% 100% 90deg, #bfbfbf, #eee);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eee), to(#bfbfbf));
+  border: 1px solid #ccc;
+  color: #333;
+  text-shadow: 0 1px 0px #eee;
+}
+a.mbp_form_crop:hover {
+  background: #dfdfdf;
+  background: -moz-linear-gradient(0% 100% 90deg, #aaa, #dfdfdf);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#dfdfdf), to(#aaa));
+}
+a.mbp_form_delete,
+a.mbp_form_delete_file {
+  background: #891100;
+  background: -moz-linear-gradient(0% 100% 90deg, #891100, #b51700);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#b51700), to(#891100));
+  border: 1px solid #891100;
+  color: #fff;
+  text-shadow: 0 1px 0px #333;
+}
+a.mbp_form_delete:hover,
+a.mbp_form_delete_file:hover {
+  background: #610f01;
+  background: -moz-linear-gradient(0% 100% 90deg, #610f01, #a71500);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#a71500), to(#610f01));
+}

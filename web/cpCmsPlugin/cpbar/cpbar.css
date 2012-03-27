@@ -1,0 +1,23 @@
+div.cpbar_item {
+	font-size: 1.4em;
+	text-align: center;
+	padding: 4px;
+	margin-top: 1px;
+  cursor: pointer;
+}
+div.cpbar_error {
+	background-color: #c00;
+	color: #fff;
+}
+div.cpbar_success,
+div.cpbar_notice {
+	background-color: #090;
+	color: #fff;
+}
+div.cpbar_info {
+	background-color: #ffc;
+	color: #000;
+}
+div.cpbar_msg {
+	text-align: center;
+}

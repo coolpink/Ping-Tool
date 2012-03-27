@@ -1,0 +1,2 @@
+#!/bin/bash
+mysqldump --user=root MarkHill -t -n --complete-insert > datadump.sql

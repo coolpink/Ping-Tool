@@ -1,0 +1,92 @@
+body {
+  padding: 20px 0;
+}
+
+#logo {
+  margin: 0 0 20px;
+  overflow: hidden;
+  text-align: right;
+
+  h1 {
+    display: block;
+    float: right;
+    width: 125px;
+    height: 47px;
+    overflow: hidden;
+
+    a {
+      background: transparent url(../img/coolpink.gif) no-repeat scroll 0 0;
+      display: block;
+      width: 125px;
+      height: 47px;
+
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+ul.clients {
+  list-style: none;
+  li {
+    list-style: none;
+    margin: 0 0 4px;
+    overflow: hidden;
+
+    &.nav-header {
+      font-size: 1em;
+      margin-bottom: 0;
+    }
+
+    strong,
+    span {
+      float: left;
+    }
+    span.status {
+      border-radius: 5em;
+      -moz-border-radius: 5em;
+      -webkit-border-radius: 5em;
+      float: right;
+      margin: 0 0 0 5px;
+      padding: 2px;
+      height: 16px;
+      width: 16px;
+      position: relative;
+      text-indent: -9999px;
+
+      span {
+        position: absolute;
+        margin: 3px;
+        top: 0;
+        left: 0;
+        height: 14px;
+        width: 14px;
+      }
+    }
+    .loader {
+      background: transparent url(../img/ajax-loader.gif) no-repeat scroll 0 0;
+      float: right;
+      height: 16px;
+      width: 16px;
+      text-indent: -9999px;
+    }
+  }
+}
+
+#uptime_chart {
+  table {
+    margin: 10px auto !important;
+  }
+}
+
+.stats {
+  .last-updated {
+    text-align: right;
+
+    small {
+      font-size: 0.8em;
+      font-weight: bold;
+    }
+  }
+}

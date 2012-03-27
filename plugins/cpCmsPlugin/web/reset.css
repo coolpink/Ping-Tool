@@ -1,0 +1,66 @@
+html,body,
+div,span,
+applet,object,iframe,
+h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,a,abbr,acronym,address,big,cite,code,
+del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,sub,sup,tt,var,dd,dl,dt,li,ol,ul,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td{margin: 0; padding: 0; border: 0; font-style: normal; font-size: 100%; line-height: 1.25em; font-family: inherit; text-align: left;}
+body {background-color: #fff; color: #000;}
+em {font-style: italic; }
+table { border-spacing: 0; }
+ol,ul { list-style: none;}
+q:before,q:after,blockquote:before,blockquote:after {content: "";}
+hr {display:none}
+
+html { font-size: 62.5%; font-family: "Segoe UI", Arial, "Liberation Sans", Helvetica, Verdana, sans-serif; }
+
+h1 {
+  color: #006E12;
+  font-size: 1.7em;
+  font-weight: normal;
+  padding: 10px 15px;
+}
+h1 a {
+  color: #006E12;
+}
+
+textarea,
+input,
+select {
+  font-family: "Segoe UI", Arial, "Liberation Sans", Helvetica, Verdana, sans-serif;
+  font-size: 13px;
+}
+
+div.scrollable {
+  overflow: auto;
+}
+
+div.sidebar {
+  background-color: #DFE9F5;
+}
+
+ul.sf_admin_td_actions li a {
+  padding-left: 20px;
+  background: url(/sfDoctrinePlugin/images/default.png) no-repeat;
+}
+ul.sf_admin_td_actions li.sf_admin_action_delete a {
+  background-image: url(/sfDoctrinePlugin/images/delete.png);
+}
+ul.sf_admin_td_actions li.sf_admin_action_mark_as_recipe_of_the_week a {
+  background-image: url(/sfDoctrinePlugin/images/tick.png);
+}
+
+ul.sf_admin_actions {
+float:left;
+}
+
+/* Pagination */
+
+.sf_admin_pagination {float:right;}
+.sf_admin_pagination a, .sf_admin_pagination span.current_page { color: #000; font-weight:700; padding:3px 6px;display:block;float:left;height:16px;width:16px;line-height:16px;}
+.sf_admin_pagination span.current_page { padding:3px;display:block;float:left;height:16px;width:16px;line-height:16px;}
+.sf_admin_pagination a.image_controls { padding:2px; }
+.sf_admin_pagination a:hover.image_controls { background-color:#FFF; }
+.sf_admin_pagination span.left_image_controls { padding-right:10px; }
+.sf_admin_pagination span.right_image_controls { padding-left:10px; }

@@ -1,0 +1,168 @@
+#admin-menu ul.tabs {
+  overflow: hidden;
+  zoom: 1;
+  font-size: 1.2em;
+  background-color: #dfe9f5;
+  background-image: url(images/tabs/bg.jpg);
+  background-repeat: repeat-x;
+  background-position: bottom left;
+}
+#admin-menu ul, #admin-menu ul li {
+  list-style: none;
+}
+#admin-menu ul.tabs li {
+  float: left;
+}
+#admin-menu ul.tabs li a,
+#admin-menu ul.tabs li a span {
+  display: block;
+  outline: none;
+}
+#admin-menu ul.tabs li a {
+  color: #284467;
+  text-decoration: none;
+  cursor: default;
+  background-repeat: repeat-x;
+  background-position: top left;
+  background-image: url(images/tabs/tab_bg.gif);
+  background-position: -1000px -1000px;
+}
+#admin-menu ul.tabs li a span {
+  background-image: url(images/tabs/tab_left_bg.gif);
+  background-repeat: no-repeat;
+  background-position: -1000px -1000px;
+}
+#admin-menu ul.tabs li a span span {
+  padding: 6px 14px 3px;
+  background-image: url(images/tabs/tab_right_bg.gif);
+}
+
+/* == hover == */
+#admin-menu ul.tabs li a:hover,
+#admin-menu ul.tabs li a:hover span {
+  background-position: 0 0;
+}
+#admin-menu ul.tabs li a:hover span span{
+  background-position: top right;
+}
+
+/* == selected == */
+#admin-menu ul.tabs li a.selected,
+#admin-menu ul.tabs li a.selected span {
+  background-position: 0 -24px;
+}
+#admin-menu ul.tabs li a.selected span span{
+  background-position: right -24px;
+}
+
+
+
+/* == sel hover == */
+#admin-menu ul.tabs li a.selected:hover,
+#admin-menu ul.tabs li a.selected:hover span {
+  background-position: 0 -48px;
+}
+#admin-menu ul.tabs li a.selected:hover span span{
+  background-position: right -48px;
+}
+
+#admin-menu div.toolbar {
+  background-image: url(images/toolbar/bg-bottom.gif);
+  background-repeat: repeat-x;
+  background-position: bottom left;
+  padding-bottom: 3px;
+  display: none;
+}
+#admin-menu div.toolbar.selected {
+  display: block;
+}
+#admin-menu div.toolbar a {
+  outline: none;
+}
+#admin-menu div.toolbar ul {
+  background-image: url(images/toolbar/bg.jpg);
+  background-repeat: repeat-x;
+  background-position: top left;
+  background-color: #dde6f5;
+  overflow: hidden;
+  zoom: 1;
+  font-size: 1.2em;
+}
+#admin-menu div.toolbar ul li {
+  position: relative;
+  float: left;
+  margin: 5px 0px 5px 5px;
+  padding-right: 8px;
+  background-image: url(images/toolbar/sep.gif);
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+#admin-menu div.toolbar a.label {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #9883a9;
+  cursor: default;
+}
+#admin-menu div.toolbar ul li ul {
+  overflow: hidden;
+  zoom: 1;
+  padding-bottom: 15px;
+  font-size: 1em;
+  background-image: none;
+  background-color: transparent;
+  float: left;
+}
+#admin-menu div.toolbar ul li ul li {
+  float: left;
+  padding: 0;
+  margin: 0;
+  background-image: none;
+}
+
+#admin-menu div.toolbar ul li ul li a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  color: #1f3977;
+  cursor: default;
+  width: 80px;
+  height: 80px;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+#admin-menu div.toolbar ul li ul li images {
+  width: 32px;
+  height: 32px;
+}
+#admin-menu div.toolbar ul li ul li a:hover {
+  background-image: url(images/toolbar/item-hover.jpg);
+}
+#admin-menu div.toolbar ul li ul li a:active,
+#admin-menu div.toolbar ul li ul li a.selected {
+  background-image: url(images/toolbar/item-down.jpg);
+}
+#admin-menu div.toolbar ul li ul li a span {
+  text-align: center;
+  display: block;
+  padding: 3px 0;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+#admin-menu div.toolbar ul li ul li a:hover span {
+  background-image: url(images/toolbar/item-hover-top.jpg);
+}
+#admin-menu div.toolbar ul li ul li a:active span,
+#admin-menu div.toolbar ul li ul li a.selected span {
+  background-image: url(images/toolbar/item-down-top.jpg);
+}
+div.toolbar ul li ul li a strong {
+  display: block;
+  text-align: center;
+  font-weight: normal;
+  margin-top: 6px;
+  line-height: 1.2em;
+}

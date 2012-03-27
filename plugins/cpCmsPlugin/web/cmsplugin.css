@@ -1,0 +1,104 @@
+table.listing tr.hovered td span.expander {
+    background-image: url(images/expand-hover-row.gif) !important;
+}
+table.listing tr.hovered td span.hovered {
+    background-image: url(images/expand-hover.gif) !important;
+}
+table.listing tr.hovered td span.hovered {
+    background-image: url(images/expand-hover.gif) !important;
+}
+table.listing tr.selected td span.expander {
+    background-image: url(images/expand-selected.gif) !important;
+}
+table.listing tr.selected.hovered td span.hovered {
+    background-image: url(images/expand-selected-hover.gif) !important;
+}
+table.listing tr.selected.expanded.hovered td span.expander,
+table.listing tr.selected.expanded td span.expander {
+    background-image: url(images/expanded-selected.gif) !important;
+}
+table.listing tr.selected.expanded.hovered td span.expander.hovered {
+    background-image: url(images/expanded-selected-hover.gif) !important;
+}
+table.listing tr.expanded td span.expander {
+    background-image: url(images/expanded-off.gif) !important;
+}
+table.listing tr.expanded.hovered td span.expander {
+    background-image: url(images/expanded-hovered.gif) !important;
+}
+table.listing tr.expanded.hovered td span.hovered.expander {
+    background-image: url(images/expanded-hover.gif) !important;
+}
+table.listing td span.expander {
+    float: left;
+    width: 20px;
+    height: 15px;
+    display: block;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    background-repeat: no-repeat;
+    background-image: url(images/expand-off.gif);
+    margin-top: 3px;
+}
+.file-name {
+    background-image: url(images/file.gif);
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding: 4px;
+    padding-left: 20px;
+    display: block;
+    margin-left: 20px;
+    height: 100%;
+}
+table.listing tr div {
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+
+.sf_admin_td_actions li {
+	display: inline;
+}
+ul.sf_admin_td_actions li ul {
+    float: none;
+    display: none;
+}
+ul.sf_admin_td_actions {
+	overflow: hidden;
+	zoom: 1;
+}
+ul.sf_admin_td_actions li{
+	float: left;
+}
+ul.sf_admin_td_actions li.disabled a {
+    visibility: hidden;
+}
+ul.sf_admin_td_actions li a {
+	display: block;
+	padding-left: 16px;
+	margin-right: 10px;
+	background-repeat: no-repeat;
+	background-position: center left;
+	text-decoration: none;
+	color: #555;
+}
+
+
+ul.sf_admin_td_actions li a:hover {
+	text-decoration: underline;
+}
+ul.sf_admin_td_actions li.sf_admin_action_delete a {
+	background-image: url(images/edittrash.png);
+}
+ul.sf_admin_td_actions li.sf_admin_action_show a {
+	background-image: url(images/editcopy.png);
+}
+ul.sf_admin_td_actions li.sf_admin_action_add a {
+	background-image: url(images/add.png);
+}
+ul.sf_admin_td_actions li.sf_admin_action_edit a {
+	background-image: url(images/color_line.png);
+}
+
+ul.sf_admin_td_actions li.sf_admin_action_add {
+	display: none;
+}

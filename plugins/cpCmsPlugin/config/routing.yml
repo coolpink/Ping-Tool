@@ -1,0 +1,64 @@
+cp_media_browser_rename:
+  url:    assets/rename
+  param:  { module: cpMediaBrowser, action: rename }
+  
+cp_media_browser_move:
+  url:    assets/move
+  param:  { module: cpMediaBrowser, action: move }
+
+cp_media_browser_edit:
+  url:    assets/edit
+  params: { module: cpMediaBrowser, action: edit }
+
+cp_media_browser:
+  url:    assets
+  params: { module: cpMediaBrowser, action: list }
+
+cp_media_browser_dir_create:
+  url:    assets/dir_create
+  class:  sfRequestRoute
+  params: { module: cpMediaBrowser, action: createDirectory }
+  requirements: { sf_method: post }
+
+cp_media_browser_delete:
+  url:    assets/delete
+  class:  sfRequestRoute
+  params: { module: cpMediaBrowser, action: delete }
+  requirements: { sf_method: post }
+  
+cp_media_browser_crop:
+  url:    assets/crop
+  class:  sfRequestRoute
+  params: { module: cpMediaBrowser, action: crop }
+  requirements: { sf_method: post }
+
+cp_media_browser_dir_rename:
+  url:    assets/dir_rename
+  class:  sfRequestRoute
+  params: { module: cpMediaBrowser, action: renameDirectory }
+  requirements: { sf_method: get }
+
+cp_media_browser_file_create:
+  url:    assets/file_create
+  class:  sfRequestRoute
+  params: { module: cpMediaBrowser, action: createFile }
+  requirements: { sf_method: post }
+
+cp_media_browser_file_rename:
+  url:    assets/file_rename
+  class:  sfRequestRoute
+  params: { module: cpMediaBrowser, action: renameFile }
+  requirements: { sf_method: get }
+
+cp_media_browser_widget:
+  url:    assets/widget/:type
+  params: { module: cpMediaBrowser, action: widget, type: file }
+
+cp_media_browser_select:
+  url:    assets/select/:type
+  params: { module: cpMediaBrowser, action: select, type: file }
+
+cp_media_browser_tree_structure:
+  url:    assets/tree_structure
+  class:  sfRequestRoute
+  params: { module: cpMediaBrowser, action: getTreeStructure }

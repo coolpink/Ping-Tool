@@ -1,0 +1,148 @@
+test:
+  cp_media_browser:
+    root_dir:           /tests-uploads
+all:
+#  cpFormsPluginCroppable:
+#    models:
+#      TeamMember:
+#        images:
+#          mugshot:
+#            ratio:      1.5
+#            sizes:
+#              thumb:    { width: 60 }
+#              main:     { width: 675 }
+  cpAdminMenu:
+    assets:
+      global:
+        js:
+          - http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js
+          - http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js
+          - /cpCmsPlugin/libraries/jquery.layout.min-1.2.0.js
+          - /cpCmsPlugin/libraries/jquery.cookie.js
+          - /cpCmsPlugin/js/WindowManager.js
+          - /cpCmsPlugin/libraries/jquery.slugit.js
+          - http://maps.google.com/maps/api/js?sensor=false
+        css:
+          - /cpCmsPlugin/reset.css
+          - http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/ui-lightness/jquery-ui.css
+      listings:
+        js:
+          - /cpCmsPlugin/libraries/cp.selectable.js
+        css:
+          - /cpCmsPlugin/listing/listing.css
+      actions:
+        js:
+        css:
+          - /cpCmsPlugin/actions-bar/actions-bar.css
+      adminMenu:
+        js:
+          - /cpCmsPlugin/admin-menu/javascript/admin-menu.js
+        css:
+          - /cpCmsPlugin/admin-menu/admin-menu.css
+      cpBar:
+        js:
+          - /cpCmsPlugin/cpbar/javascript/cpbar.js
+        css:
+          - /cpCmsPlugin/cpbar/cpbar.css
+      wizard:
+        js:
+          - /cpCmsPlugin/wizard/javascript/wizard.js
+        css:
+          - /cpCmsPlugin/wizard/wizard.css
+      cropper:
+        js:
+          - /cpCmsPlugin/cropper/javascript/cropper.js
+          - /cpCmsPlugin/cropper/javascript/jquery.Jcrop.min.js
+        css:
+          - /cpCmsPlugin/cropper/jquery.Jcrop.css
+      form:
+        js:
+        css:
+          - /cpCmsPlugin/form/form.css
+      tinymce:
+        js:
+          - /cpCmsPlugin/js/tiny_mce/tiny_mce.js
+        css:
+      contextMenu:
+        js:
+          - /cpCmsPlugin/libraries/jquery.contextmenu.js
+        css:
+          - /cpCmsPlugin/libraries/jquery.contextmenu.css
+
+  cp_admin_generator_plugin:
+    # specify the folder where to pick jQuery / jQuery UI / stylesheets
+    web_dir:        /cpCmsPlugin
+
+    # use the javascript packaged jQuery / jQuery UI of plugin
+    # you can turn use_jquery to false and include your own lib version
+    use_jquery:     false
+
+    # specify the jQuery UI theme folder
+    theme_dir:      /cpCmsPlugin/css/jquery
+    
+  cp_media_browser:
+    root_dir:               /uploads       # Browsable root directory relative to sf_web_dir
+    thumbnails_enabled:     true           # Enable thumbnail creation on upload (requires sfThumnailPlugin)
+    thumbnails_dir:         .thumbnails    # Directory name for storing thumbnails
+    crops_dir:              .crops         # Directory name for storing thumbnails
+    thumbnails_max_width:   90             # 90 fits nicely into grid and list
+    assets_list:
+      js:
+        - /cpCmsPlugin/js/assets.js
+        - /cpCmsPlugin/js/assets_functions.js
+        - /cpCmsPlugin/js/assets_selectable.js
+        - /cpCmsPlugin/js/jquery.styleswitcher.js
+        - /cpCmsPlugin/js/jquery.cookie.js
+        - /cpCmsPlugin/js/jquery.jstree.js
+        - /cpCmsPlugin/js/jquery.filedrop.js
+        - /cpCmsPlugin/js/jquery.disabletextselect.js
+      css:
+        - /cpCmsPlugin/css/assets.css
+    assets_widget:
+      js:
+        - /cpCmsPlugin/js/assets.js
+        - /cpCmsPlugin/js/assets_functions.js
+        - /cpCmsPlugin/js/assets_selectable.js
+        - /cpCmsPlugin/js/jquery.styleswitcher.js
+        - /cpCmsPlugin/js/jquery.cookie.js
+        - /cpCmsPlugin/js/jquery.jstree.js
+        - /cpCmsPlugin/js/jquery.filedrop.js
+        - /cpCmsPlugin/js/jquery.disabletextselect.js
+      css:
+        - /cpCmsPlugin/css/assets.css
+        - /cpCmsPlugin/css/widget.css
+    file_types:
+      document:                                       # type of file (also used as default icon name)
+        extensions: [doc, docx, xls, xlsx, xcf, ai]   # extensions associated to this type
+        icon:       doc                               # optional icon file name, without extension
+      image:                              
+        extensions: [png, jpg, jpeg, gif] 
+      pdf:
+        extensions: [pdf]
+      binary:
+        extensions: [bin, exe, sh, bat, deb, yum]
+      video:
+        extensions: [wmv, avi, mpg, mpeg, flv, swf, mp4]
+      audio:
+        extensions: [ogg, mp3, flac, wma, cda]
+      text:
+        extensions: [txt]
+      zip:
+        extensions: [tar, gz, zip, bzip, gzip, rar, 7z]
+  sfImageTransformPlugin:
+    mime_type:
+      auto_detect: true
+      
+default:
+  sfImageTransformPlugin:
+    default_adapter: GD # GD or ImageMagick
+    default_image:
+      mime_type: image/png
+      filename: Untitled.png
+      width: 100
+      height: 100
+      color: '#FFFFFF'
+    font_dir: /usr/share/fonts/truetype/msttcorefonts
+    mime_type:
+      auto_detect: false
+      library: gd_mime_type #  gd_mime_type (GD), Fileinfo (PECL), MIME_Type (PEAR)

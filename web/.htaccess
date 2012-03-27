@@ -1,0 +1,48 @@
+Options +FollowSymLinks +ExecCGI
+
+RewriteEngine On
+
+# uncomment the following line, if you are having trouble
+# getting no_script_name to work
+#RewriteBase /
+
+# we skip all files with .something
+#RewriteCond %{REQUEST_URI} \..+$
+#RewriteCond %{REQUEST_URI} !\.html$
+#RewriteRule .* - [L]
+
+RewriteCond %{QUERY_STRING} !^$
+RewriteRule ^uploads/(.*\.(gif|jpg|jpeg|png))$ asset.php?filename=$1&%{QUERY_STRING} [L,NC]
+RewriteRule ^uploads/(.*\.(gif|jpg|jpeg|png))/(.*)$ asset.php?filename=$1&args=$3 [L,NC]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1/ [R=301,L]
+
+# we check if the .html version is here (caching)
+RewriteRule ^$ index.html [QSA]
+RewriteRule ^([^.]+)$ $1.html [QSA]
+
+##################
+# Dev env
+##################
+
+RewriteCond %{HTTP_HOST} ^dev\.(.*)$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ frontend_dev.php [QSA,L]
+
+RewriteCond %{HTTP_HOST} ^admin\.dev\.(.*)$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^.*$ backend_dev.php [QSA,L]
+
+##################
+# Live env
+##################
+
+RewriteCond %{HTTP_HOST} ^admin\.(.*)$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^.*$ backend.php [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ frontend.php [QSA,L]

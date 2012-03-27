@@ -1,0 +1,53 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values
+all:
+#  cpFormsPluginCroppable:
+#    models:
+#      TeamMember:
+#        images:
+#          mugshot:
+#            ratio:      1.5
+#            sizes:
+#              thumb:    { width: 60 }
+#              main:     { width: 675 }
+  cpAdminMenu:
+    sections:
+      Administration:
+        groups:
+          Users:
+            items:
+              Manage Users:
+                module: sfGuardUser
+                icon: /cpCmsPlugin/icons/users.png
+                tooltip: List and edit the site users
+              Change Permissions:
+                module: sfGuardPermission
+                icon: /cpCmsPlugin/icons/permissions.png
+                tooltip: change your users permissions
+              Edit Groups:
+                module: sfGuardGroup
+                icon: /cpCmsPlugin/icons/groups.png
+          General:
+            items:
+              Manage Assets:
+                module: cpMediaBrowser
+                action: list
+                icon: /cpCmsPlugin/icons/assets.png
+      Content:
+        groups:
+          Content Management:
+            items:
+              Clients:
+                module: clients
+                icon: /cpCmsPlugin/icons/client.png
+              Project:
+                module: projects
+                icon: /cpCmsPlugin/icons/project.png
+              Team:
+                module: team
+                icon: /cpCmsPlugin/icons/groups.png

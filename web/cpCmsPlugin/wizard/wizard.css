@@ -1,0 +1,153 @@
+div.wizard {
+  background-image: url(images/background.gif);
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 603px;
+  height: 584px;
+  padding: 0px 8px 8px;
+  -moz-box-shadow: 0px 0px 20px #666;
+  -webkit-box-shadow: 0px 0px 20px #666;
+  box-shadow: 0px 0px 20px #666;
+  border-radius: 9px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+}
+div.wizard div.actions {
+  position: absolute;
+  bottom: 8px;
+  line-height: 36px;
+  height: 36px;
+  padding: 2px 10px;
+  width: 583px;
+  text-align: right;
+}
+div.wizard h2 {
+  padding: 35px 10px 7px;
+  font-size: 1.5em;
+  font-weight: normal;
+  cursor: move;
+}
+div.wizard h2 img {
+  vertical-align: bottom;
+  margin-right: 4px;
+}
+div.wizard .frame {
+  width: 603px;
+  height: 479px;
+  margin: 0px;
+  overflow: auto;
+}
+div.wizard .frame p {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+div.wizard .frame .wizard-content {
+  padding: 25px 20px;
+}
+ul.wizard-buttons {
+  position: absolute;
+  bottom: 13px;
+  right: 17px;
+}
+ul.wizard-buttons li {
+  float: left;
+  margin-left: 5px;
+  line-height: 30px;
+}
+
+/* Button styles */
+div.wizard button, ul.wizard-buttons li input, ul.wizard-buttons li a.buttonanchor {
+  text-decoration: none;
+  padding: 5px 10px;
+  line-height: 1;
+  margin: 0 5px;
+  font-family: "lucida grande", sans-serif;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 0 0 5px #f5f5f5;
+  -moz-box-shadow: 0 0 5px #f5f5f5;
+  -webkit-box-shadow: 0 0 5px #f5f5f5;
+}
+
+  ul.wizard-buttons li a.buttonanchor {
+    outline: 0;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    display:block;
+    border:1px solid #707070;
+    height:14px;
+    width:46px;
+    background:url(images/buttonanchor.jpg) repeat-x top left;
+    font-size:130%;
+    color:#000;
+    padding: 5px 8px;
+    box-shadow: inset 0 0 5px #f5f5f5;
+    -moz-box-shadow: inset 0 0 5px #f5f5f5;
+    -webkit-box-shadow: inset 0 0 5px #f5f5f5;
+    margin-top:1px;
+  }
+
+    ul.wizard-buttons li a.buttonanchor:hover {
+      background:url(images/buttonanchor-hover.jpg) repeat-x top left;
+    }
+
+div.wizard button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px #e5e5e5;
+  -moz-box-shadow: 0 0 5px #e5e5e5;
+  -webkit-box-shadow: 0 0 5px #e5e5e5;
+}
+
+div.wizard button.grey {
+  background: #eee;
+  background: -moz-linear-gradient(0% 100% 90deg, #bfbfbf, #eee);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eee), to(#bfbfbf));
+  border: 1px solid #ccc;
+  color: #666;
+  text-shadow: 0 1px 0px #eee;
+}
+
+div.wizard button.grey:hover {
+  background: #dfdfdf;
+  background: -moz-linear-gradient(0% 100% 90deg, #aaa, #dfdfdf);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#dfdfdf), to(#aaa));
+}
+
+div.wizard button.green {
+  background: #7FBF4D;
+  font-weight: bold;
+  background: -moz-linear-gradient(0% 100% 90deg, #63A62F, #7FBF4D);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7FBF4D), to(#63A62F));
+  border: 1px solid #63A62F;
+  color: #fff;
+  text-shadow: 0 1px 0px #3e751a;
+}
+
+div.wizard button.green:hover {
+  background: #73b142;
+  background: -moz-linear-gradient(0% 100% 90deg, #569426, #73b142);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#73b142), to(#569426));
+}
+
+li button a {
+  color:#000;
+  text-decoration:none;
+}
+
+div.wizard ul.wizard-buttons li input.green {
+  background: #7FBF4D;
+  font-weight: bold;
+  background: -moz-linear-gradient(0% 100% 90deg, #63A62F, #7FBF4D);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7FBF4D), to(#63A62F));
+  border: 1px solid #63A62F;
+  color: #fff;
+  text-shadow: 0 1px 0px #3e751a;
+}
+
+div.wizard ul.wizard-buttons li input.green:hover {
+  background: #73b142;
+  background: -moz-linear-gradient(0% 100% 90deg, #569426, #73b142);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#73b142), to(#569426));
+}

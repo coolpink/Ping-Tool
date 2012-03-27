@@ -1,0 +1,35 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Path
+    theme:                 cp
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          path
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: []
+      fields:
+        nav_title: { label: 'Navigation Title', help: 'The title which will be used in the navigation' }
+        slug: { label: 'Path', help: 'A short tag that will be used for the URL of this page. i.e. "my-page"'}
+        visible_in_navigation: { help: 'Do you want this to be displayed in the navigation?'}
+      list:
+        max_per_page: 100000
+        fields:
+          formatted_template_type: { label : "<span>Template type</span>"}
+        display: [=meta_navigation_title, meta_path, formatted_template_type, created_at, updated_at, meta_visible_in_navigation]
+      filter:
+        class: false
+      form:
+        display: [meta_navigation_title, meta_path, meta_page_title, meta_description, meta_visible_in_navigation, Content]
+      edit:
+        title: Editing %%formatted_template_type%% "%%meta_navigation_title%%"
+      new:
+        actions:
+          _list: ~
+          _save: ~
+        title: Adding new %%formatted_template_type%% to "%%parent_display_name%%"
