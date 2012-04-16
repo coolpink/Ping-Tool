@@ -11,6 +11,10 @@ check_domain:
   url:   /check-domain/
   param: { module: HomePage, action: checkDomain }
 
+check_count:
+  url:   /check-count/
+  param: { module: HomePage, action: checkCount }
+
 ping_domains:
   url:   /ping-domains/
   param: { module: HomePage, action: pingDomains }

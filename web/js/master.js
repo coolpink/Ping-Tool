@@ -1,14 +1,9 @@
 $(function() {
-
-
   $("ul.clients li.client strong").each(function(i, elem) {
     var domain = $(elem).html();
     var self = $(this);
-
-    var offset = 5000 * i;
-    setTimeout(function() {
-      pingUrl(domain, self);
-    }, offset);
+    
+    pingUrl(domain, self);
   });
 
   function pingUrl(domain, self)
@@ -20,16 +15,15 @@ $(function() {
       var color = (response.status == "OK") ? "success" : "danger";
       var status = "<span class=\"status btn-"+ color +"\"><span class=\"icon-white icon-"+ status +"\"></span></span>";
       self.parent().children("span.status:first").replaceWith(status);
-
-
-
-      $(".check-count").html(response.check_count);
-
       self.parent().children(".loader:first").remove();
 
-      setInterval(function() {
+      setTimeout(function() {
         pingUrl(domain, self);
-      }, 300000); // every 5 minutes
+      }, 30000); // every 30 seconds
+
+      $.get("/check-count/", {}, function(response) {
+        $(".check-count").html(response.checkCount);
+      }, "json");
     }, "json");
   }
 });

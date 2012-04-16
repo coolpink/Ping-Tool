@@ -77,4 +77,13 @@ class HomePageActions extends sfActions
     }
     die("Scan completed successfully");
   }
+
+  public function executeCheckCount(sfWebRequest $request)
+  {
+    sfConfig::set('sf_web_debug', false);
+    $data = array();
+    $data["checkCount"] = Doctrine_Core::getTable("Check")->count();
+
+    return $this->renderText(json_encode($data));
+  }
 }

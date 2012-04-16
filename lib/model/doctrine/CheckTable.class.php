@@ -18,7 +18,7 @@ class CheckTable extends Doctrine_Table
                    ->createQuery("c")
                    ->where("status = 'OK'")
                    ->count();
-      return round(($successful / $total) * 100);
+      return $total > 0 ? round(($successful / $total) * 100) : 0;
     }
 
     public function getDowntime()
@@ -30,6 +30,6 @@ class CheckTable extends Doctrine_Table
                    ->createQuery("c")
                    ->where("status = 'ERROR'")
                    ->count();
-      return round(($successful / $total) * 100);
+      return $total > 0 ? round(($successful / $total) * 100) : 0;
     }
 }
