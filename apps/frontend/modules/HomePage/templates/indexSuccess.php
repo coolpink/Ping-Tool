@@ -2,7 +2,7 @@
 
   <div class="span12">
     <div class="hero-unit">
-      <h2>I have now checked <?php echo $projects->count(); ?> websites a total of <span class="check-count"><?php echo $checks->count(); ?></span> times!</h2>
+      <h2>I have now checked <?php echo $projects->count(); ?> websites a total of <span class="check-count"><?php echo $check_count ?></span> times!</h2>
       <p>That's pretty cool, considering since this tools creation we have had <?php echo $upTime; ?>% up time across all our sites!</p>
     </div>
   </div>

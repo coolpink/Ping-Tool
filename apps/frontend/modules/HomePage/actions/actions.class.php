@@ -19,7 +19,9 @@ class HomePageActions extends sfActions
   {
     $this->clients = Doctrine_Core::getTable("Client")->findAllOrdered();
     $this->projects = Doctrine_Core::getTable("Project")->findAll();
-    $this->checks = Doctrine_Core::getTable("Check")->findAll();
+
+    $this->check_count = Doctrine_Core::getTable("Check")->count();
+    /*$this->checks = Doctrine_Core::getTable("Check")->findAll();*/
     $this->upTime =  Doctrine_Core::getTable("Check")->getUptime();
   }
 
