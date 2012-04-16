@@ -6,12 +6,14 @@ var qs = require('querystring');
 var response;
 
 http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  
-  
+  res.writeHead(200, {
+		'Content-Type': 'application/json',
+		'Access-Control-Allow-Origin' : '*'
+	});
+
+  var status = "OK";
   var response = new Array();
   var url_parts = url.parse(req.url,true);
-  
   var domain = url_parts.query.domain;
    
   if (domain != undefined)
@@ -26,15 +28,14 @@ http.createServer(function (req, res) {
 	};
 	
 	
-	http.get(options, function(res) {
-	  console.log(domain + ":" + res.statusCode);
+	http.get(options, function(_res) {
+    //res.write(JSON.stringify("{ 'status': '" + status + "' }"));
+    status = "OK";
 	}).on('error', function(e) {
-	  console.log(domain + ":" + res.statusCode);
+    status = "ERROR";
 	});
-	
 
-  	
-  	
+  res.end(JSON.stringify( { status: status } ));
   	 	
   	
   }
